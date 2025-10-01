@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div className='grid place-items-center h-screen'>
       <div className='shadow-lg p-5 rounded-lg border-1'>
-       <h1 className="text-xl my-4 px-3" style={{ fontWeight: 600 }}>Login</h1>
+       <h1 className="text-xl my-4 px-3" style={{ fontWeight: 600 }}>Register</h1>
 
 
         <Form
@@ -28,6 +28,14 @@ const page = () => {
           >
             <Input />
           </Form.Item>
+           <Form.Item
+            label="Email"
+            name="Email"
+            rules={[{ required: true, message: 'Please input your email!' }]}
+            style={{ marginBottom: 8 }} // smaller bottom space
+          >
+            <Input />
+          </Form.Item>
 
           <Form.Item
             label="Password"
@@ -37,7 +45,15 @@ const page = () => {
           >
             <Input.Password />
           </Form.Item>
-        
+             <Form.Item
+                      label="ConfirmPwd"
+                      name="ConfirmPassword"
+                      rules={[{ required: true, message: 'Please input your password!' }]}
+                      style={{ marginBottom: 8 }} // smaller bottom space
+                      
+                    >
+                      <Input.Password />
+                    </Form.Item>
 
           <Form.Item
             name="remember"
@@ -47,16 +63,16 @@ const page = () => {
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
 
-          <Form.Item style={{ marginBottom: 12 }}> 
-            <Button type="primary" htmlType="submit" className="w-full">
-              Login
+          <Form.Item style={{ marginBottom: 12 }}> {/* reduced space below button */}
+            <Button type="primary" htmlType="submit" className="w-full ">
+              Register
             </Button>
           </Form.Item>
 
-       
+          {/* Register link aligned right */}
           <div className="text-right mt-1">
-            <span>Don't have an account? </span>
-            <a href="/Register" className="text-blue-500 hover:underline">Register</a>
+            <span>Already have an account? </span>
+            <a href="/" className="text-blue-500 hover:underline">Login</a>
           </div>
         </Form>
       </div>
