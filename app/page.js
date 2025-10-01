@@ -55,7 +55,7 @@ const page = () => {
 
        
           <div className="text-right mt-1">
-            <span>Don't have an account? </span>
+           <span>{"Don't have an account?"}</span>
             <a href="/Register" className="text-blue-500 hover:underline">Register</a>
           </div>
         </Form>
